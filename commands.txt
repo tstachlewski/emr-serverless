@@ -1,0 +1,9 @@
+Sample data file:
+https://tomash-udemy.s3.eu-west-1.amazonaws.com/emr-serverless/small.csv
+
+AWS CLI command to copy 10MB data file:
+aws s3 cp s3://tomash-udemy/emr-serverless/people-01.csv s3://NAME_OF_YOUR_BUCKET/data/people-input/people-01.csv 
+...
+aws s3 cp s3://tomash-udemy/emr-serverless/people-10.csv s3://NAME_OF_YOUR_BUCKET/data/people-input/people-10.csv 
+
+

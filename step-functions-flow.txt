@@ -1,0 +1,23 @@
+{
+  "ApplicationId": "REPLACE_ME",
+  "ExecutionRoleArn": "REPLACE_ME",
+  "JobDriver": {
+    "SparkSubmit": {
+      "EntryPoint": "s3://REPLACE_ME/scripts/data-converter.py",
+      "EntryPointArguments.$": "States.Array($.detail.bucket.name,$.detail.object.key)"
+    }
+  }
+}
+
+
+
+{
+  "ApplicationId": "REPLACE_ME",
+  "ExecutionRoleArn": "REPLACE_ME",
+  "JobDriver": {
+    "SparkSubmit": {
+      "EntryPoint": "s3://REPLACE_ME/scripts/data-agregator.py",
+      "EntryPointArguments.$": "States.Array($.detail.bucket.name)"
+    }
+  }
+}
