@@ -21,3 +21,16 @@
     }
   }
 }
+
+
+{
+  "Bucket.$": "$.detail.bucket.name",
+  "CopySource.$": "States.Format('{}/{}',$.detail.bucket.name,$.detail.object.key)",
+  "Key.$": "States.Format('data/people-source/{}',States.ArrayGetItem(States.StringSplit($.detail.object.key, '/'), 2))"
+}
+
+
+{
+  "Bucket.$": "$.detail.bucket.name",
+  "Key.$": "$.detail.object.key"
+}
