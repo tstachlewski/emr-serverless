@@ -6,4 +6,7 @@ aws s3 cp s3://tomash-udemy/emr-serverless/people-01.csv s3://NAME_OF_YOUR_BUCKE
 ...
 aws s3 cp s3://tomash-udemy/emr-serverless/people-10.csv s3://NAME_OF_YOUR_BUCKET/data/people-input/people-10.csv 
 
+# EMR Studio
+spark.catalog.setCurrentDatabase("people")
 
+df = spark.sql("SELECT * FROM people_parquet")
